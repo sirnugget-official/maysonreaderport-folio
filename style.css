@@ -1,0 +1,430 @@
+/* style.css */
+
+/* Basic Styles */
+
+body {
+
+    font-family: 'Arial', sans-serif;
+
+    line-height: 1.6;
+
+    background-color: #f4f4f4;
+
+    color: #333;
+
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 0px;
+    width: 100%;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #555;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.logo {
+
+    font-size: 1.8rem;
+
+    font-weight: bold;
+
+}
+
+.nav-links {
+
+    list-style: none;
+
+    display: flex;
+
+}
+
+.nav-links li {
+
+    margin-left: 30px;
+
+}
+
+.nav-links a {
+
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+
+}
+
+.nav-links a:hover {
+
+    color: #007bff;
+
+}
+
+.hamburger {
+
+    display: none;
+
+    cursor: pointer;
+
+}
+
+.bar {
+
+    display: block;
+
+    width: 25px;
+
+    height: 3px;
+
+    margin: 5px auto;
+
+    background-color: #333;
+
+    transition: transform 0.3s ease;
+
+}
+
+/* Intro Section */
+
+.intro {
+
+    background-color: #007bff; /* Example color */
+
+    color: #fff;
+
+    padding: 100px 0;
+
+    text-align: center;
+
+}
+
+.intro-text {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+}
+
+.title {
+
+    font-size: 3.5rem;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+.subtitle {
+
+    font-size: 1.8rem;
+
+    margin-bottom: 40px;
+
+}
+
+/* Sections */
+
+.section {
+
+    padding: 80px 0;
+
+}
+
+.section-title {
+
+    text-align: center;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 40px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #007bff; /* Example color */
+
+}
+
+.content {
+
+    text-align: center;
+
+}
+
+.content p {
+
+    margin-bottom: 20px;
+
+}
+
+/* Projects */
+
+.projects-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    grid-gap: 30px;
+
+}
+
+.project {
+
+    background-color: #fff;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    transition: transform 0.3s ease;
+
+}
+
+.project:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.project img {
+
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+
+}
+
+.project-info {
+
+    padding: 20px;
+
+}
+
+.project-info h3 {
+
+    margin-bottom: 10px;
+
+    color: #007bff; /* Example color */
+
+}
+
+/* Skills */
+
+.skills-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    grid-gap: 20px;
+
+}
+
+.skill {
+
+    text-align: center;
+
+    padding: 20px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    transition: transform 0.3s ease;
+
+}
+
+.skill:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.skill i {
+
+    font-size: 3rem;
+
+    color: #007bff; /* Example color */
+
+    margin-bottom: 10px;
+
+}
+
+/* Contact */
+
+.contact-info {
+
+    text-align: center;
+
+}
+
+.contact-info ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin-top: 20px;
+
+}
+
+.contact-info li {
+
+    display: inline-block;
+
+    margin: 0 15px;
+
+}
+
+.contact-info li i {
+
+    font-size: 1.5rem;
+
+    margin-right: 10px;
+
+}
+
+/* Footer */
+
+.footer {
+
+    background-color: #333;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 20px 0;
+
+}
+
+/* Button */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background-color: #007bff; /* Example color */
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: background-color 0.3s ease;
+
+}
+
+.btn:hover {
+
+    background-color: #0056b3;
+
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+    .hamburger {
+
+        display: block;
+
+    }
+
+    .projects-container,
+
+    .skills-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/* Hamburger Menu Styling */
+
+.hamburger.active .bar:nth-child(1) {
+
+    transform: translateY(8px) rotate(45deg);
+
+}
+
+.hamburger.active .bar:nth-child(2) {
+
+    opacity: 0;
+
+}
+
+.hamburger.active .bar:nth-child(3) {
+
+    transform: translateY(-8px) rotate(-45deg);
+
+}
+
+.nav-links.active {
+
+    display: flex;
+
+    flex-direction: column;
+
+    background-color: #fff;
+
+    position: absolute;
+
+    top: 70px; /* Adjust based on your header height */
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+
+    z-index: 1;
+
+}
+
+.nav-links.active li {
+
+    margin: 10px 0;
+
+}
